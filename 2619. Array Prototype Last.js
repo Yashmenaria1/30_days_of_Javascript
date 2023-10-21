@@ -2,8 +2,14 @@
  * @return {null|boolean|number|string|Array|Object}
  */
 Array.prototype.last = function() {
-    return this[this.length - 1] ?? -1;
+      let arr=this;
+      if(arr.length==0)
+      {
+         return -1;
+      }
+      return arr[arr.length-1];
 };
+
 
 //TypeScript
 declare global {
@@ -13,5 +19,13 @@ declare global {
 }
 
 Array.prototype.last = function() {
-    return this[this.length - 1] ?? -1;
+      let arr=this;
+      if(arr.length==0)
+      {
+         return -1;
+      }
+      return arr[arr.length-1];
 };
+
+
+export {};
